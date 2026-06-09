@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "Ember & Oak Restaurant",
+    "category": "Restaurant Website",
+    "tag": "Concept Project",
+    "description": "A refined dining experience website with online reservations, seasonal menu showcase, and ambient photography integration.",
+    "tags": ["UI Design", "Responsive", "Booking System"],
+    "color": "#8B5CF6",
+    "icon": "🍽️"
+  },
+  {
+    "id": 2,
+    "title": "ClearSmile Dental Clinic",
+    "category": "Dental Clinic Website",
+    "tag": "Concept Project",
+    "description": "Trust-first clinic website with appointment scheduling, service pages, and patient-focused copy to increase bookings.",
+    "tags": ["UI Design", "Forms", "SEO"],
+    "color": "#06B6D4",
+    "icon": "🦷"
+  },
+  {
+    "id": 3,
+    "title": "PeakForm Fitness Studio",
+    "category": "Fitness Studio Website",
+    "tag": "Concept Project",
+    "description": "High-energy studio site with class schedules, membership tiers, trainer profiles, and a lead capture landing page.",
+    "tags": ["Landing Page", "E-Commerce", "Animations"],
+    "color": "#F59E0B",
+    "icon": "💪"
+  },
+  {
+    "id": 4,
+    "title": "Horizon Realty Group",
+    "category": "Real Estate Website",
+    "tag": "Concept Project",
+    "description": "Premium property showcase with MLS-style listings, neighborhood guides, and agent profile pages.",
+    "tags": ["UI Design", "Listings", "SEO"],
+    "color": "#10B981",
+    "icon": "🏠"
+  },
+  {
+    "id": 5,
+    "title": "Lumière Beauty Studio",
+    "category": "Salon Website",
+    "tag": "Concept Project",
+    "description": "Elegant salon website with service gallery, online booking, stylist profiles, and a lookbook section.",
+    "tags": ["UI Design", "Booking", "Gallery"],
+    "color": "#EC4899",
+    "icon": "✂️"
+  },
+  {
+    "id": 6,
+    "title": "Mercer & Associates Law",
+    "category": "Law Firm Website",
+    "tag": "Concept Project",
+    "description": "Authoritative law firm site with practice area pages, attorney bios, case intake forms, and compliance-ready structure.",
+    "tags": ["UI Design", "Forms", "Accessibility"],
+    "color": "#6366F1",
+    "icon": "⚖️"
+  }
+]

@@ -1,0 +1,131 @@
+/* =============================================
+   AURAPIXEL — Responsive Styles
+   ============================================= */
+
+/* ── Tablet (≤ 1024px) ── */
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-10);
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+  .contact-info { max-width: 560px; }
+}
+
+/* ── Mobile (≤ 768px) ── */
+@media (max-width: 768px) {
+  /* Nav */
+  .nav-links,
+  .nav-cta .btn:not(.btn-primary) {
+    display: none;
+  }
+  .nav-menu-btn { display: flex; }
+  .nav-cta .btn-primary {
+    padding: 0.5rem 1rem;
+    font-size: var(--text-xs);
+  }
+
+  /* Hero */
+  .hero-trust {
+    gap: var(--space-4);
+  }
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Grids */
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+  .process-steps {
+    grid-template-columns: 1fr;
+  }
+
+  /* Contact */
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  .contact-form-card {
+    padding: var(--space-6);
+  }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+  }
+
+  /* Section headers */
+  .section-header p {
+    font-size: var(--text-base);
+  }
+}
+
+/* ── Small Mobile (≤ 480px) ── */
+@media (max-width: 480px) {
+  .navbar {
+    height: 56px;
+  }
+  .hero {
+    padding-top: 56px;
+  }
+
+  .hero-trust {
+    flex-direction: column;
+    gap: var(--space-3);
+    align-items: flex-start;
+    padding-inline: var(--space-6);
+  }
+
+  .portfolio-card .portfolio-visual {
+    height: 180px;
+  }
+
+  .cta-card {
+    padding: var(--space-8) var(--space-5);
+  }
+
+  .mobile-menu a {
+    font-size: var(--text-lg);
+  }
+}
+
+/* ── Large Screens (≥ 1400px) ── */
+@media (min-width: 1400px) {
+  :root {
+    --max-width: 1320px;
+  }
+}
+
+/* ── Print ── */
+@media print {
+  .navbar,
+  .hero-bg,
+  .footer-social {
+    display: none !important;
+  }
+  body {
+    background: white;
+    color: black;
+  }
+}
