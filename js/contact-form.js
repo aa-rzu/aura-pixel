@@ -84,10 +84,11 @@
     });
 
     // ── Form submit ──
-    form.addEventListener('submit', function (e) {
+    form.addEventListener('submit', async function (e) {
       e.preventDefault();
 
       let allValid = true;
+
       Object.keys(rules).forEach(function (fieldName) {
         if (!validateField(fieldName)) allValid = false;
       });
@@ -98,27 +99,38 @@
         return;
       }
 
-      // Simulate submission
       submitBtn.disabled = true;
-      submitBtn.querySelector('span').textContent = 'Sending…';
+      submitBtn.querySelector('span').textContent = 'Sending...';
 
-      setTimeout(function () {
-        form.style.display = 'none';
-        if (successEl) {
-          successEl.classList.add('visible');
-          successEl.focus();
-        }
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: {
+            Accept: 'application/json'
+          }
+        });
 
-        // Reset after 8 seconds for demo
-        setTimeout(function () {
+        if (response.ok) {
+          form.style.display = 'none';
+
+          if (successEl) {
+            successEl.classList.add('visible');
+            successEl.focus();
+          }
+
           form.reset();
-          form.style.display = '';
-          if (successEl) successEl.classList.remove('visible');
-          submitBtn.disabled = false;
-          submitBtn.querySelector('span').textContent = 'Send Message';
-        }, 8000);
-      }, 1200);
-    });
+        } else {
+          alert('Something went wrong. Please try again.');
+        }
+      } catch (error) {
+        console.error(error);
+        alert('Failed to send message.');
+      }
+
+      submitBtn.disabled = false;
+      submitBtn.querySelector('span').textContent = 'Send Message';
+ });
   }
 
   if (document.readyState === 'loading') {
